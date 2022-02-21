@@ -1,11 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import {ApolloClient,InMemoryCache, ApolloProvider, HttpLink, from} from "@apollo/client";
 import {onError} from "@apollo/client/link/error";
 import GetCategories from './Components/GetCategories';
 import { setContext } from '@apollo/client/link/context';
-import GetProducts from './Components/GetProducts';
-import { useState } from 'react';
 const errorLink=onError(({graphqlErrors,networkErrors})=>{
   if(graphqlErrors){
     graphqlErrors.map(({message,location,path})=>{

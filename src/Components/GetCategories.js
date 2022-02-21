@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
-import {useQuery, gql} from "@apollo/client";
-import { LOAD_CATEGORIES,LOAD_PRODUCT } from "../GraphQL/Queries";
+import {useQuery} from "@apollo/client";
+import { LOAD_CATEGORIES} from "../GraphQL/Queries";
 import GetProducts from "./GetProducts";
 function GetCategories(){
     const {error:error, loading:loading, data:data} = useQuery(LOAD_CATEGORIES);
@@ -12,8 +12,7 @@ function GetCategories(){
     useEffect(()=>{
         if(data){
             setCategories(data.category.categories);
-            console.log(data.category.categories);
-        }
+                }
        
         
         

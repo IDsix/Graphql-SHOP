@@ -11,7 +11,6 @@ function GetProducts({slug}){
     useEffect(()=>{
         if(data){
             setProduct(data.product);
-            console.log(data.product)
         }
     },[data])
     
